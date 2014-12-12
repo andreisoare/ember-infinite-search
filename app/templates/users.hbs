@@ -17,5 +17,9 @@
         <div class="clearfix"></div>
       </div>
     {{/each}}
+
+    {{#infinite-scroll content=model hasMore=hasMore}}
+      <img class="loading" src="img/preloader-horizontal-black.gif"/>
+    {{/infinite-scroll}}
   </div>
 </div>

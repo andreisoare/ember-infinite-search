@@ -1,0 +1,13 @@
+<div class="content-wrapper">
+  <h1>Infinite search</h1>
+
+  <div class="users-list">
+    {{#each user in model}}
+      <div class="user">
+        <img {{bind-attr src=user.avatar}} class="avatar"/>
+        <div class="name">{{user.name}}</div>
+        <div class="clearfix"></div>
+      </div>
+    {{/each}}
+  </div>
+</div>

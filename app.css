@@ -1,0 +1,54 @@
+*:focus {
+  outline: 0;
+}
+
+.content-wrapper {
+  width: 320px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-bar {
+  width: 100%;
+  height: 40px;
+  font-size: 14px;
+  padding: 0 14px;
+  border: 1px solid #aaa;
+  border-radius: 0;
+  box-shadow: none;
+  -webkit-appearance: none;
+          box-sizing: border-box;
+     -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.users-list {
+  margin-top: 30px;
+}
+
+.user {
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  height: 50px;
+  width: 50px;
+  float: left;
+}
+
+.name {
+  line-height: 50px;
+  margin-left: 15px;
+  float: left;
+}
+
+.loading {
+  display: block;
+  margin: 30px auto;
+}
+
+.clearfix {
+  clear: both;
+}

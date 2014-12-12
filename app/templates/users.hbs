@@ -1,6 +1,14 @@
 <div class="content-wrapper">
   <h1>Infinite search</h1>
 
+  {{input placeholder="Who are you searching for?"
+          value=searchText
+          type="text"
+          name="search"
+          class="search-bar"
+          action="search"
+          on="enter"}}
+
   <div class="users-list">
     {{#each user in model}}
       <div class="user">

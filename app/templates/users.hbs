@@ -9,17 +9,5 @@
           action="search"
           on="enter"}}
 
-  <div class="users-list">
-    {{#each user in model}}
-      <div class="user">
-        <img {{bind-attr src=user.avatar}} class="avatar"/>
-        <div class="name">{{user.name}}</div>
-        <div class="clearfix"></div>
-      </div>
-    {{/each}}
-
-    {{#infinite-scroll content=model hasMore=hasMore}}
-      <img class="loading" src="img/preloader-horizontal-black.gif"/>
-    {{/infinite-scroll}}
-  </div>
+  {{outlet}}
 </div>

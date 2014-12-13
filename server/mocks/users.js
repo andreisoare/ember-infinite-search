@@ -31,12 +31,14 @@ module.exports = function(app) {
     var skip = parseInt(req.query.skip);
     var usersChunk = users.slice(skip, skip + limit);
 
-    res.send({
-      users: usersChunk,
-      meta: {
-        total: users.length
-      }
-    });
+    setTimeout(function() {
+      res.send({
+        users: usersChunk,
+        meta: {
+          total: users.length
+        }
+      });
+    }, 1000);
   });
 
   usersRouter.post('/', function(req, res) {

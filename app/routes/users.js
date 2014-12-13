@@ -9,7 +9,9 @@ export default Ember.Route.extend({
 
   model: function(params) {
     return this.store.find('user', {
-      q: params.q
+      q: params.q,
+      limit: 20,
+      skip: 0
     });
   }
 });

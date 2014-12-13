@@ -7,7 +7,11 @@ export default Ember.Controller.extend({
   searchText: '',
   searchTextBinding: Ember.Binding.oneWay('q'),
 
-  hasMore: true,
+  hasMore: function() {
+    var total = this.get('model.meta.total');
+    var currentLength = this.get('model.length');
+    return total > currentLength;
+  }.property('model.meta.total', 'model.[]'),
 
   actions: {
     search: function() {
@@ -15,7 +19,12 @@ export default Ember.Controller.extend({
     },
 
     fetchMore: function(callback) {
-      console.log('Fetch more data!');
+      var promise = this.store.find('user', {
+        q: this.get('q'),
+        limit: 10,
+        skip: this.get('model.length')
+      });
+      callback(promise);
     }
   }
 });
